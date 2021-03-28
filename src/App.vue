@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Hello, I am Michael</h1>
+  <div class="bg-blue-900 text-white p-8">
+    <h1 class="text-xl font-semibold">Hello, I am Michael</h1>
   </div>
   <ContactForm />
 </template>
