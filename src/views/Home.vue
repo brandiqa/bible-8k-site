@@ -1,37 +1,47 @@
 <template>
-  <header>
-    <div class="container mx-auto lg:w-screen-md px-8 text-white">
+  <header class="bg-gray-800 py-8">
+    <div class="container mx-auto lg:w-screen-md px-8 text-white mb-1">
       <h1 class="text-3xl md:text-4xl font-semibold">
-        Hi! My name is <span class="text-cyan-400">Michael</span>,
+        Hi! My name is <span class="text-cyan-400">Michael</span>.
       </h1>
       <p class="text-lg mt-2">
-        Am working on creating
-        <span class="text-lime-400">cinematically beautiful</span> animated
+        Am working on producing
+        <span class="text-lime-400">cinematically beautiful</span> 3D animated
         series on
-        <span class="text-teal-400 font-semibold">Bible stories</span>
+        <span class="text-teal-400 font-semibold">Bible stories</span> for
+        mature audiences.
       </p>
     </div>
   </header>
   <div class="container mx-auto p-4 lg:w-screen-md">
     <div class="blok">
       <h2 class="title">Why</h2>
-      <p>
-        Bible stories are fundamental to our growth as Christians. While we can
-        read the Bible at any time, I believe its more profound if we can watch
-        them through our television screens and cinema theatres.
+      <p class="text-lg text-center text-white">
+        To create streamable Christian content with
+        <span class="font-semibold">high production values</span>.
       </p>
       <p>
-        The level of computer graphic technology available to us today has
-        improved dramatically over the last decade. We can now re-create ancient
-        worlds and bring to life stories with realism that we have not seen
-        before.
+        For too long, Christian films have taken a backseat in creativity and
+        originality. This project aims to re-tell Bible stories in a fresh, new
+        way never seen before, starting with the
+        <span class="text-cyan-400 font-semibold">Book of Genesis!</span>
       </p>
       <p>
-        Combined with cinematic story-telling, we can deliver high quality
-        Christianity content that everyone can binge watch and build their faith
-        at the same time.
+        The Computer Graphics Technology we have access today is more powerful
+        and feature-rich than what was available just a few years ago. Together
+        with incredible writers, artists, actors, composers, singers and sound
+        engineers, we can re-imagine ancient worlds and characters with
+        magnificent realism, detail and immersion.
+      </p>
+      <p class="text-white text-lg">
+        Bible stories are fundamental to our growth as Christians. It is our
+        duty to spread <span class="text-lime-400">God's Word</span> across the
+        world and provide hope for our future generations.
       </p>
     </div>
+
+    <hr />
+
     <div class="blok">
       <h2 class="title">Goal</h2>
       <p>
@@ -59,6 +69,9 @@
         </li>
       </ul>
     </div>
+
+    <hr />
+
     <div class="blok">
       <h2 class="title">Funding</h2>
       <p>
@@ -87,13 +100,16 @@
 </template>
 
 <style lang="scss" scoped>
+hr {
+  @apply my-12 w-3/4 mx-auto;
+}
 .blok {
-  @apply px-4 mt-6;
+  @apply px-4;
   .title {
-    @apply text-xl font-semibold text-white text-center mb-2;
+    @apply text-2xl font-bold text-white text-center;
   }
   p {
-    @apply mb-4;
+    @apply mt-4;
   }
 }
 

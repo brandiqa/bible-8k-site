@@ -28,10 +28,10 @@ a {
 }
 .links {
   a {
-    @apply text-cyan-100 tracking-wide pb-4 w-18 md:mr-4 text-center inline-block hover:text-teal-400 hover:border-cyan-500 hover:border-b-2;
+    @apply text-cyan-100 tracking-wide pb-4 w-18 md:mr-4 text-center inline-block hover:text-teal-400 hover:border-teal-400 hover:border-b-2;
   }
   .router-link-exact-active {
-    @apply hidden md:inline-block text-cyan-400 font-semibold border-cyan-400 border-b-2;
+    @apply hidden md:inline-block text-cyan-300 font-semibold border-cyan-300 border-b-2;
   }
 }
 </style>
