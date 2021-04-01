@@ -2,7 +2,21 @@
   "name": "bible-8k-site",
   "description": "Website for 8kbible.com",
   "version": "0.0.1",
+  "private": true,
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandiqa/bible-8k-site"
+  },
+  "bugs": {
+    "url": "https://github.com/brandiqa/bible-8k-site/issues",
+    "email": "micwanyoike@gmail.com"
+  },
+  "homepage": "https://www.8kbible.com",
+  "author": {
+    "name": "Michael Wanyoike",
+    "email": "michael@8kbible.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
