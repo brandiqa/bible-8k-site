@@ -18,7 +18,7 @@
       <router-link to="/episodes">Episodes</router-link>
       <router-link to="/contact">Contact</router-link>
     </div>
-    <div></div>
+    <div class="hidden md:block"></div>
   </nav>
 </template>
 
@@ -28,10 +28,10 @@ a {
 }
 .links {
   a {
-    @apply text-white tracking-wide mr-4 pb-4 w-20 text-center inline-block hover:text-teal-400 hover:border-cyan-500 hover:border-b-2;
+    @apply text-white tracking-wide pb-4 w-18 md:mr-4 text-center inline-block hover:text-teal-400 hover:border-cyan-500 hover:border-b-2;
   }
   .router-link-exact-active {
-    @apply text-cyan-400 font-semibold border-cyan-400 border-b-2;
+    @apply hidden md:inline-block text-cyan-400 font-semibold border-cyan-400 border-b-2;
   }
 }
 </style>
