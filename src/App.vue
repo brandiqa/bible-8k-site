@@ -2,7 +2,7 @@
   <header>
     <navbar />
   </header>
-  <main>
+  <main class="flex-grow my-4">
     <router-view />
   </main>
   <Footer />
@@ -10,6 +10,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import './App.css'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 

@@ -1,0 +1,7 @@
+body {
+  @apply font-sans bg-gray-900 text-gray-300;
+}
+
+#app {
+  @apply flex flex-col min-h-screen overflow-x-hidden;
+}
