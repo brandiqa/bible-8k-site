@@ -1,6 +1,8 @@
 {
   "name": "bible-8k-site",
-  "version": "0.0.0",
+  "description": "Website for 8kbible.com",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -8,7 +10,8 @@
     "format": "prettier --write \"**/*.{vue,ts,css,json,md}\""
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.5",

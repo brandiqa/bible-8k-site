@@ -1,18 +1,23 @@
 <template>
-  <div class="bg-blue-900 text-white p-8">
-    <h1 class="text-xl font-semibold">Hello, I am Michael</h1>
-  </div>
-  <ContactForm />
+  <header>
+    <navbar />
+  </header>
+  <main>
+    <router-view />
+  </main>
+  <Footer />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ContactForm from './components/ContactForm.vue'
+import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    ContactForm,
+    Navbar,
+    Footer,
   },
 })
 </script>
