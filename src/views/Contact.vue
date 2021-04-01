@@ -1,6 +1,8 @@
 <template>
-  <h1>Contact</h1>
-  <contact-form />
+  <div class="container mx-auto px-8">
+    <h1 class="text-white font-bold- text-4xl">Contact</h1>
+    <contact-form />
+  </div>
 </template>
 
 <script lang="ts">

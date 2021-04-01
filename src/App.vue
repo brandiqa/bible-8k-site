@@ -2,7 +2,7 @@
   <header>
     <navbar />
   </header>
-  <main class="flex-grow my-4">
+  <main class="flex-grow mt-4">
     <router-view />
   </main>
   <Footer />
