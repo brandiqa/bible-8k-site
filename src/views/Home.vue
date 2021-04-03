@@ -5,10 +5,11 @@
         Hi! My name is <span class="text-cyan-400">Michael</span>.
       </h1>
       <p class="text-lg mt-2">
-        Am working on producing
-        <span class="text-lime-400">cinematically beautiful</span> 3D animated
-        series on
-        <span class="text-teal-400 font-semibold">Bible stories</span> for
+        Am working on independently producing a
+        <span class="text-lime-400"
+          >cinematic beautiful 3D animated series</span
+        >
+        on <span class="text-teal-400 font-semibold">Bible stories</span> for
         mature audiences.
       </p>
     </div>
@@ -43,7 +44,11 @@
     <hr />
 
     <div class="blok">
-      <h2 class="title">Goal</h2>
+      <h2 class="title">Plan</h2>
+      <p>
+        Build multiple remote teams that can work across continents to make this
+        series a reality
+      </p>
       <p>
         The goal is to produce
         <span class="font-bold">12 episodes </span> covering the
@@ -52,6 +57,7 @@
         This will mark the <span class="font-bold">first season</span> of the
         show.
       </p>
+      <h2 class="title">Story Development</h2>
       <p>
         The series will also address a number of issues often seen with
         Christian and other historical films. The series will do this by:
@@ -83,7 +89,9 @@
     </div>
   </div>
   <div class="bg-teal-400 text-center px-4 py-6">
-    <div class="text-2xl font-bold text-gray-900 mb-2">Want to Join?</div>
+    <div class="text-2xl font-bold text-gray-900 mb-2">
+      Want to Participate?
+    </div>
     <div class="container mx-auto text-gray-800 text-lg">
       <p>
         If you would like to get involved in the project or just have a
@@ -91,7 +99,7 @@
         below.
       </p>
       <button
-        class="mt-8 font-semibold px-6 py-2 bg-lime-500 rounded shadow-md hover:bg-lime-400 hover:text-black"
+        class="mt-8 font-semibold px-6 py-2 bg-gray-900 text-lime-400 rounded shadow-md hover:bg-lime-500 hover:text-black"
       >
         <router-link to="/contact">Reach Out</router-link>
       </button>

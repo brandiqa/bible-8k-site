@@ -1,6 +1,6 @@
 {
   "name": "bible-8k-site",
-  "description": "Website for 8kbible.com",
+  "description": "Website for biblein8k.com",
   "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
@@ -12,10 +12,10 @@
     "url": "https://github.com/brandiqa/bible-8k-site/issues",
     "email": "micwanyoike@gmail.com"
   },
-  "homepage": "https://www.8kbible.com",
+  "homepage": "https://www.biblein8k.com",
   "author": {
     "name": "Michael Wanyoike",
-    "email": "michael@8kbible.com"
+    "email": "michael@biblein8k.com"
   },
   "scripts": {
     "dev": "vite",
