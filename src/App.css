@@ -5,3 +5,7 @@ body {
 #app {
   @apply flex flex-col min-h-screen overflow-x-hidden;
 }
+
+.btn {
+  @apply font-semibold px-6 py-2 rounded shadow-md;
+}

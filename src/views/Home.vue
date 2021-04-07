@@ -28,6 +28,13 @@
         <span class="text-cyan-400 font-semibold">Book of Genesis!</span>
       </p>
       <p>
+        If you were to read the Book of Genesis in one sitting, you probably can
+        be done with it under 4 hours. However, without taking the time to
+        reflect and meditate, the stories won't have any meaning for you. By
+        animating the Bible into a series, we can expand the stories into
+        lengthy meaningful episodes that you can connect with.
+      </p>
+      <p>
         The Computer Graphics Technology we have access today is more powerful
         and feature-rich than what was available just a few years ago. Together
         with incredible writers, artists, actors, composers, singers and sound
@@ -99,7 +106,7 @@
         below.
       </p>
       <button
-        class="mt-8 font-semibold px-6 py-2 bg-gray-900 text-lime-400 rounded shadow-md hover:bg-lime-500 hover:text-black"
+        class="btn mt-8 text-lime-400 bg-gray-900 hover:bg-lime-500 hover:text-gray-900"
       >
         <router-link to="/contact">Reach Out</router-link>
       </button>
