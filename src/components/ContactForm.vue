@@ -1,6 +1,12 @@
 <template>
   <Form class="max-w-screen-sm" @submit="onSubmit" :validation-schema="schema">
-    <Alert type="error" title="Error" message="Something went wrong" />
+    <Alert v-if="errorMsg" type="error" title="Error" :message="errorMsg" />
+    <Alert
+      v-if="successMsg"
+      type="success"
+      title="Success"
+      :message="successMsg"
+    />
     <div class="field">
       <label for="name">Name</label>
       <Field name="name" type="text" />
@@ -19,16 +25,44 @@
       <ErrorMessage class="error" name="message" />
     </div>
 
-    <button class="mt-2 text-gray-900 btn bg-cyan-400 hover:bg-lime-400">
-      Send Message
+    <button
+      class="mt-2 text-gray-900 btn bg-cyan-400 hover:bg-lime-400"
+      :class="loading && 'bg-lime-600 text-lime-50 cursor-not-allowed'"
+      :disabled="loading"
+    >
+      <span class="inline-flex items-center" v-if="loading">
+        <svg
+          class="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          ></path>
+        </svg>
+        <span class="animate-pulse">Sending...</span>
+      </span>
+      <span class="animate-pulse" v-else-if="errorMsg">Try again</span>
+      <span v-else>Send Message</span>
     </button>
   </Form>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { Form, Field, ErrorMessage } from 'vee-validate'
-import * as yup from 'yup'
+import { object, string } from 'yup'
 import axios from 'axios'
 
 import Alert from './Alert.vue'
@@ -43,46 +77,59 @@ export default defineComponent({
     TextAreaInput,
     Alert,
   },
-  data() {
-    const schema = yup.object({
-      name: yup.string().required('Name is required').min(2),
-      email: yup
-        .string()
+  setup() {
+    const schema = object({
+      name: string().required('Name is required').min(2),
+      email: string()
         .required('Email address is required')
         .email('Invalid email address format'),
-      message: yup
-        .string()
+      message: string()
         .required('Message is required')
         .min(5, 'Message must be at least 5 characters'),
     })
 
     return {
       schema,
+      loading: ref(false),
+      successMsg: ref(''),
+      errorMsg: ref(''),
     }
   },
   methods: {
-    async onSubmit(values: Object) {
-      console.log(values)
+    async onSubmit(values: Object, { resetForm }) {
       try {
+        // start loading spinner
+        this.loading = true
+        this.errorMsg = ''
         const endpoint = import.meta.env.VITE_USEBASIN_ENDPOINT as string
         const response = await axios.post(endpoint, values)
-        console.log(response.statusText)
-        // reset form
-        // show success message
+        if (response.status === 200) {
+          // reset form
+          resetForm()
+          // show success message
+          this.successMsg =
+            "Thank you for reaching out. I'll be in touch very soon."
+          this.loading = false
+        }
       } catch (error) {
         if (error.response) {
           // The request was made and the server responded with a status code
           // that falls out of the range of 2xx
+          this.errorMsg =
+            'The request was made and the server responded with a status code' +
+            error.response.status +
+            error.response.data
           console.log(error.response.data)
         } else if (error.request) {
           // The request was made but no response was received
-          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
-          // http.ClientRequest in node.js
-          console.log(error.request)
+          this.errorMsg = 'The request was made but no response was received'
+          // console.log(error.request)
         } else {
           // Something happened in setting up the request that triggered an Error
+          this.errorMsg = error.message
           console.log('Error', error.message)
         }
+        this.loading = false
       }
     },
   },
