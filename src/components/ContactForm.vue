@@ -61,7 +61,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { Form, Field, ErrorMessage } from 'vee-validate'
+import { Form, Field, ErrorMessage, FormActions } from 'vee-validate'
 import { object, string } from 'yup'
 import axios from 'axios'
 
@@ -96,7 +96,7 @@ export default defineComponent({
     }
   },
   methods: {
-    async onSubmit(values: Object, { resetForm }) {
+    async onSubmit(values: Object, { resetForm }: FormActions<any>) {
       try {
         // start loading spinner
         this.loading = true
@@ -107,8 +107,7 @@ export default defineComponent({
           // reset form
           resetForm()
           // show success message
-          this.successMsg =
-            "Thank you for reaching out. I'll be in touch very soon."
+          this.successMsg = "Thanks for reaching out. I'll be in touch soon🙂"
           this.loading = false
         }
       } catch (error) {
