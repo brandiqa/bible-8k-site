@@ -29,6 +29,8 @@
 import { defineComponent } from 'vue'
 import { Form, Field, ErrorMessage } from 'vee-validate'
 import * as yup from 'yup'
+import axios from 'axios'
+
 import Alert from './Alert.vue'
 import TextAreaInput from './TextAreaInput.vue'
 
@@ -48,7 +50,10 @@ export default defineComponent({
         .string()
         .required('Email address is required')
         .email('Invalid email address format'),
-      message: yup.string().required('Message is required').min(5),
+      message: yup
+        .string()
+        .required('Message is required')
+        .min(5, 'Message must be at least 5 characters'),
     })
 
     return {
@@ -56,8 +61,29 @@ export default defineComponent({
     }
   },
   methods: {
-    onSubmit(values: Object) {
+    async onSubmit(values: Object) {
       console.log(values)
+      try {
+        const endpoint = import.meta.env.VITE_USEBASIN_ENDPOINT as string
+        const response = await axios.post(endpoint, values)
+        console.log(response.statusText)
+        // reset form
+        // show success message
+      } catch (error) {
+        if (error.response) {
+          // The request was made and the server responded with a status code
+          // that falls out of the range of 2xx
+          console.log(error.response.data)
+        } else if (error.request) {
+          // The request was made but no response was received
+          // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+          // http.ClientRequest in node.js
+          console.log(error.request)
+        } else {
+          // Something happened in setting up the request that triggered an Error
+          console.log('Error', error.message)
+        }
+      }
     },
   },
 })
