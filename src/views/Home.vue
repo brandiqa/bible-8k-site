@@ -5,97 +5,62 @@
         Hi! My name is <span class="text-cyan-400">Michael</span>.
       </h1>
       <p class="mt-2 text-lg">
-        Am working on independently producing a
-        <span class="text-lime-400"
-          >cinematic beautiful 3D animated series</span
-        >
-        on <span class="font-semibold text-teal-400">Bible stories</span> for
-        mature audiences.
+        Am working on producing
+        <span class="text-lime-400">
+          cinematically beautiful CG animated series
+        </span>
+        on the <span class="font-semibold text-teal-400">Bible</span> for
+        <span class="font-bold">young adults</span>.
       </p>
     </div>
   </header>
-  <div class="container p-4 mx-auto lg:w-screen-md">
-    <div class="blok">
+  <div>
+    <div class="content">
       <h2 class="title">Why</h2>
       <p class="text-lg text-center text-white">
-        To create a <span class="font-semibold">binge-worthy</span> Christian
-        show than can help
-        <span class="font-semibold">strengthen our faith</span> further.
-      </p>
-      <p>
-        For too long, Christian films have taken a backseat in creativity and
-        originality. This project aims to re-tell Bible stories in a fresh, new
-        way never seen before, starting with the
-        <span class="font-semibold text-cyan-400">Book of Genesis!</span>
-      </p>
-      <p>
-        Animation is a powerful medium for story-telling using artistic and
-        creative expressions that can't often isn't seen with live-action film
-      </p>
-      <p>
-        Digital artists today are able to re-create ancient kingdoms in stunning
-        detail
-      </p>
-      <p>Real-time rendering technology allows</p>
-      <p>
-        If you were to read the Book of Genesis in one sitting, you probably can
-        be done with it under 4 hours. However, without taking the time to
-        reflect and meditate, the stories won't have any meaning for you. By
-        animating the Bible into a series, we can expand the stories into
-        lengthy meaningful episodes that you can connect with.
-      </p>
-      <p>
-        The Computer Graphics Technology we have access today is more powerful
-        and feature-rich than what was available just a few years ago. Together
-        with incredible writers, artists, actors, composers, singers and sound
-        engineers, we can re-imagine ancient worlds and characters with
-        magnificent realism, detail and immersion.
-      </p>
-      <p class="text-lg text-white">
         Bible stories are fundamental to our growth as Christians. It is our
-        duty to spread <span class="text-lime-400">God's Word</span> across the
-        world to our current and future generations.
+        duty raise our future generations under
+        <span class="text-lime-400">God's Word</span>.
+      </p>
+      <p>
+        Animation is a powerful story-telling medium that connects emotionally
+        with audiences quite differently than live action films. Using modern
+        art skills, performance acting and technology, we can deliver an
+        immersive, more realistic presentation of the world that was written
+        about in the Bible.
+      </p>
+      <p>
+        As 21st century artists, we have the ability to re-create ancient worlds
+        and to re-imagine historical figures in order to provide a visual
+        context for the written scripture. Understanding the Bible requires time
+        and meditation. The works produced by this project will simply be a form
+        of Bible study for those wishing to delve further.
       </p>
     </div>
 
     <hr />
 
-    <div class="blok">
-      <h2 class="title">Plan</h2>
-      <p>
-        Build multiple remote teams that can work across continents to make this
-        series a reality
-      </p>
-      <p>
-        The goal is to produce
-        <span class="font-bold">12 episodes </span> covering the
-        <span class="font-bold">Book of Genesis</span> as accuratley as
-        possible. Each episode will have an approximate runtime of 50 minutes.
-        This will mark the <span class="font-bold">first season</span> of the
-        show.
-      </p>
-      <h2 class="title">Story Development</h2>
-      <p>
-        The series will also address a number of issues often seen with
-        Christian and other historical films. The series will do this by:
-      </p>
-      <ul class="mb-4 list-square">
-        <li>Introducing diversity in main characters</li>
-        <li>
-          Re-creating ancient environments that are green and flowing(not always
-          desert like)
-        </li>
-        <li>Potraying architectural buildings and statues that are colorful</li>
-        <li>
-          Re-imagining structures made of wood and fabric that turned to dust
-          long ago
-        </li>
-      </ul>
+    <div class="alt">
+      <div class="content">
+        <h2 class="title">Plan</h2>
+        <p class="text-gray-900 subtitle">
+          The first step is to connect &amp; enlist members interested in making
+          this project a
+          <span class="font-bold">reality</span>.
+        </p>
+        <p>The following experienced and skilled personnel are needed:</p>
+        <ul class="list-disc">
+          <li>Animation Director</li>
+          <li>Story/Script Writer</li>
+          <li>Storyboard Artist</li>
+          <li>Film Editor</li>
+        </ul>
+      </div>
     </div>
 
     <hr />
 
-    <div class="blok">
+    <div class="content">
       <h2 class="title">Funding</h2>
       <p>
         A crowdfunding campaign will be launched once we have a big enough
@@ -126,12 +91,25 @@
 
 <style lang="scss" scoped>
 hr {
-  @apply my-12 w-3/4 mx-auto;
+  @apply my-12 w-1/3 mx-auto;
 }
-.blok {
-  @apply px-4;
+// .blok {
+//   @apply p-4;
+//   .title {
+//     @apply text-2xl font-bold text-white text-center;
+//   }
+//   p {
+//     @apply mt-4;
+//   }
+// }
+
+.content {
+  @apply container mx-auto md:w-screen-md p-4;
   .title {
     @apply text-2xl font-bold text-white text-center;
+  }
+  .subtitle {
+    @apply text-lg text-center;
   }
   p {
     @apply mt-4;
