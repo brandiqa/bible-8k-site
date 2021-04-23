@@ -52,7 +52,7 @@
             <a
               href="https://www.investopedia.com/terms/b/bootstrap.asp"
               target="_blank"
-              rel="“nofollow”"
+              rel="nofollow noreferrer"
             >
               bootstrapping
             </a>

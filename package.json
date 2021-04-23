@@ -19,7 +19,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "compile": "vue-tsc --noEmit",
+    "build": "vite build",
     "serve": "vite preview",
     "format": "prettier --write \"**/*.{vue,ts,css,json,md}\""
   },
