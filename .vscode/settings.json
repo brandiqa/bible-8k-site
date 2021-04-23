@@ -1,0 +1,17 @@
+{
+    "cSpell.enableFiletypes": [
+        "!css",
+        "!git-commit",
+        "!graphql",
+        "!html",
+        "!javascript",
+        "!javascriptreact",
+        "!json",
+        "!jsonc",
+        "!less",
+        "!plaintext",
+        "!python",
+        "!typescript",
+        "vue"
+    ]
+}
