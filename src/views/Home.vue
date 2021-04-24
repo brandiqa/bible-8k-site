@@ -162,6 +162,7 @@ export default defineComponent({
       title: `Bible in 8K`,
       description: `Bible stories are fundamental to our growth as Christians. The Bible in 8K is a project set on creating cinematically beautiful CG animated series on the Bible for young adults.  We intend to produce and deliver an episodic series with high production values supporting multiple languages.`,
       keywords: `animated bible stories, cg bible stories, bible in 8k`,
+      url: `https://bible-8k-site.pages.dev/`,
     })
 
     useHead({
@@ -176,11 +177,26 @@ export default defineComponent({
           name: `keywords`,
           content: computed(() => siteData.keywords),
         },
+        {
+          key: 'og:type',
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          key: 'og:url',
+          property: 'og:url',
+          content: computed(() => siteData.url),
+        },
+        {
+          key: 'og:description',
+          property: 'og:description',
+          content: computed(() => siteData.description),
+        },
       ],
       link: [
         {
           rel: 'canonical',
-          href: 'https://bible-8k-site.pages.dev/',
+          href: computed(() => siteData.url),
         },
       ],
     })
