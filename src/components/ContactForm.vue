@@ -9,19 +9,29 @@
     />
     <div class="field">
       <label for="name">Name</label>
-      <input type="text" name="name" v-model="name" />
+      <input type="text" name="name" v-model="name" :disabled="isSubmitting" />
       <span class="error">{{ nameError }} </span>
     </div>
 
     <div class="field">
       <label for="email">Email</label>
-      <input type="email" name="email" v-model="email" />
+      <input
+        type="email"
+        name="email"
+        v-model="email"
+        :disabled="isSubmitting"
+      />
       <span class="error">{{ emailError }} </span>
     </div>
 
     <div class="field">
       <label for="message">Message</label>
-      <textarea name="message" :rows="5" v-model="message" />
+      <textarea
+        name="message"
+        :rows="5"
+        v-model="message"
+        :disabled="isSubmitting"
+      />
       <span class="error">{{ messageError }} </span>
     </div>
 
@@ -30,30 +40,13 @@
       :disabled="isSubmitting"
     >
       <span class="inline-flex items-center" v-if="isSubmitting">
-        <svg
-          class="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-        >
-          <circle
-            class="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            stroke-width="4"
-          ></circle>
-          <path
-            class="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          ></path>
-        </svg>
-        <span class="animate-pulse">Sending...</span>
+        <i-codicon:loading class="mr-2 animate-spin" />
+        <span>Sending...</span>
       </span>
       <span class="animate-pulse" v-else-if="errorMsg">Try again</span>
-      <span v-else>Send Message</span>
+      <span v-else class="inline-flex items-center"
+        ><i-bytesize-send class="mr-2" /> Send Message</span
+      >
     </button>
   </form>
 </template>
@@ -152,7 +145,7 @@ label {
 input[type='text'],
 input[type='email'],
 textarea {
-  @apply w-full px-2 py-2 mt-1 text-gray-700 border border-gray-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500 focus:outline-none;
+  @apply w-full px-2 py-2 mt-1 text-gray-700 border border-gray-300 rounded-md shadow-sm focus:ring-cyan-500 focus:border-cyan-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-75;
 }
 
 input[type='checkbox'] {
