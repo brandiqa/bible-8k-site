@@ -45,7 +45,7 @@
       </span>
       <span class="animate-pulse" v-else-if="errorMsg">Try again</span>
       <span v-else class="inline-flex items-center"
-        ><i-bytesize-send class="mr-2" /> Send Message</span
+        ><i-carbon-send-filled class="w-6 h-6 mr-2" /> Send Message</span
       >
     </button>
   </form>
