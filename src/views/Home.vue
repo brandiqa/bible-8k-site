@@ -192,6 +192,11 @@ export default defineComponent({
           property: 'og:description',
           content: computed(() => siteData.description),
         },
+        {
+          key: 'og:image',
+          property: 'og:image',
+          content: '',
+        },
       ],
       link: [
         {
