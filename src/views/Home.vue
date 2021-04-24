@@ -17,11 +17,11 @@
   <div>
     <div class="py-8 content">
       <h2 class="title">Why</h2>
-      <p class="text-lg text-center text-white">
+      <h3 class="text-lg text-center text-white">
         Bible stories are fundamental to our growth as Christians. It is our
         duty to raise our future generations under
         <span class="text-lime-400">God's Word</span>.
-      </p>
+      </h3>
       <p>
         Animation is a powerful story-telling medium that connects emotionally
         with audiences quite differently than live action films. Using modern
@@ -82,10 +82,10 @@
 
     <div class="py-8 content">
       <h2 class="title">Funding</h2>
-      <p class="subtitle">
+      <h3 class="subtitle">
         The main source of funding we'll look at is
         <span class="font-bold text-lime-400">crowdfunding</span>.
-      </p>
+      </h3>
       <p>
         For film makers, crowdfunding is probably the best way to raise funds
         that guarantees freedom of creativity without interference from
@@ -134,7 +134,8 @@ hr {
   .subtitle {
     @apply text-lg text-center;
   }
-  p {
+  p,
+  h3 {
     @apply mt-4;
   }
 }
