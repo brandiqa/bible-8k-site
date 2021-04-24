@@ -10,14 +10,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ContactForm from '../components/ContactForm.vue'
-import PageHeader from '../components/PageHeader.vue'
 
 export default defineComponent({
   name: 'App',
-  components: {
-    ContactForm,
-    PageHeader,
-  },
 })
 </script>
