@@ -1,5 +1,5 @@
 <template>
-  <form class="max-w-screen-sm" @submit="onSubmit">
+  <div>
     <Alert v-if="errorMsg" type="error" title="Error" :message="errorMsg" />
     <Alert
       v-if="successMsg"
@@ -7,6 +7,8 @@
       title="Success"
       :message="successMsg"
     />
+  </div>
+  <form class="max-w-screen-sm" @submit="onSubmit">
     <div class="field">
       <label for="name">Name</label>
       <input type="text" name="name" v-model="name" :disabled="isSubmitting" />
@@ -39,12 +41,12 @@
       class="mt-2 text-gray-900 btn bg-cyan-400 hover:bg-lime-400"
       :disabled="isSubmitting"
     >
-      <span class="inline-flex items-center" v-if="isSubmitting">
+      <span class="flex items-center" v-if="isSubmitting">
         <i-codicon:loading class="mr-2 animate-spin" />
         <span>Sending...</span>
       </span>
       <span class="animate-pulse" v-else-if="errorMsg">Try again</span>
-      <span v-else class="inline-flex items-center"
+      <span v-else class="flex"
         ><i-carbon-send-filled class="w-6 h-6 mr-2" /> Send Message</span
       >
     </button>

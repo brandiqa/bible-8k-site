@@ -6,7 +6,7 @@
     <span class="p-1">
       <span class="font-bold"> {{ title }} :</span> {{ message }}
     </span>
-    <button class="p-1 rounded-md" v-on:click="dismiss">
+    <button class="p-1 rounded-md" v-on:click="dismiss" type="button">
       <i-eva-close-circle-outline class="w-6 h-6" />
     </button>
   </div>
