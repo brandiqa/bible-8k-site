@@ -2,9 +2,9 @@
   <header class="py-8 bg-gray-800">
     <div class="container px-8 mx-auto mb-1 text-white">
       <h1 class="text-4xl text-white font-bold-">{{ title }}</h1>
-      <p class="mt-2 text-lg">
+      <h2 class="mt-2 text-lg">
         {{ subtitle }}
-      </p>
+      </h2>
     </div>
   </header>
 </template>
