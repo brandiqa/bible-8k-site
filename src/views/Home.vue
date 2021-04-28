@@ -33,9 +33,13 @@
         As 21st century artists, we have the ability to richly re-create ancient
         worlds and to re-imagine historical figures in order to provide a visual
         and auditory context for the written scripture. Understanding the Bible
-        requires time, deliberation and meditation. The works produced by this
-        project will simply be a study resource for anyone wishing to learn
-        about Christianity.
+        properly requires you to read from the start till the last book.
+      </p>
+      <p>
+        Using CG technology, we can develop the context necessary to understand
+        the environment and challenges faced by people during those historical
+        times. This hopefully will allow us Christians to make sense of many of
+        the scriptures that are unfamiliar to us.
       </p>
     </div>
 
@@ -44,46 +48,33 @@
     <div class="py-8 alt">
       <div class="content">
         <h2 class="title">Plan</h2>
-        <p class="text-lg text-gray-900">
-          <span class="font-bold">STEP 1:</span> We need to
-          <span class="font-bold">find volunteers</span> who would be interested
-          in
-          <span class="font-bold">
-            <a
-              href="https://www.investopedia.com/terms/b/bootstrap.asp"
-              target="_blank"
-              rel="nofollow noreferrer"
+        <ul class="mt-4 text-lg">
+          <li>
+            1. Get <span class="font-bold">training</span> in
+            <span class="font-semibold"
+              >film editing, script writing, storyboarding</span
             >
-              bootstrapping
-            </a>
-          </span>
-          this project and making it a <span class="font-bold">reality</span>.
-        </p>
-        <p class="text-lg text-gray-900">
-          <span class="font-bold">STEP 2:</span> Develop an
-          <span class="font-bold">animation pipeline</span> suitable for
-          <span class="font-bold">remote production teams</span> by working on
-          <span class="font-bold">animated short films</span>.
-        </p>
-        <p class="ml-4 text-gray-700 font=semibold">
-          By working on multiple animated shorts, the newly formed team will be
-          able level up their skills in preparation for achieving high
-          production values when developing and producing the animated Bible
-          series.
-        </p>
-        <p class="text-lg text-gray-900">
-          <span class="font-bold">STEP 3:</span> Build an
-          <span class="font-bold">online community of fans</span> that would
-          benefit from watching the upcoming
-          <span class="font-bold">animated Bible series</span> for young adults.
-        </p>
+            and <span class="font-semibold">developing animatics</span>
+          </li>
+          <li>
+            2. <span class="font-bold">Network</span> with like-minded artists
+          </li>
+          <li>
+            3. Start a <span class="font-bold">blog</span> to keep
+            <span class="font-semibold">track of progress</span>
+          </li>
+          <li>
+            4. <span class="font-bold">Update plan</span> once the necessary
+            skills have been acquired
+          </li>
+        </ul>
       </div>
     </div>
 
     <div class="py-8 content">
       <h2 class="title">Funding</h2>
       <h3 class="subtitle">
-        The main source of funding we'll look at is
+        The main source of funding being considered for will be
         <span class="font-bold text-lime-400">crowdfunding</span>.
       </h3>
       <p>
@@ -92,13 +83,16 @@
         investors and institutions.
       </p>
       <p>
-        By building and engaging with a community early, we hope to deliver
-        content that speaks to the minds and hearts of our audiences.
+        By building and engaging with a community early, we can deliver content
+        that speaks to the minds and hearts of our audiences.
       </p>
       <p>
-        Plans for crowdfunding will be revealed once all
-        <span class="italic font-semibold text-white">3 STEPS in the PLAN</span>
-        have been attained.
+        Plans for crowdfunding will be developed once there's a guarantee that
+        the required
+        <span class="italic font-semibold text-white"
+          >quality standards and production values</span
+        >
+        for the project can be achieved.
       </p>
     </div>
   </div>
@@ -110,7 +104,7 @@
       <h2 class="title">Want to Participate?</h2>
       <p class="text-xl text-gray-900">
         If you would like to get involved in this project in any way, you can
-        send me an email directly by clicking the button below.
+        connect with me via email directly by clicking the button below.
       </p>
       <button
         class="mt-8 bg-gray-900 btn text-lime-400 hover:bg-lime-500 hover:text-gray-900"
@@ -123,7 +117,7 @@
 
 <style lang="scss" scoped>
 hr {
-  @apply my-12 w-1/3 mx-auto;
+  @apply mb-8 w-1/3 mx-auto;
 }
 
 .content {
