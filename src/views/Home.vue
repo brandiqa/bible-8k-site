@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-96 flex flex-col justify-center items-center space-y-4">
+  <div class="my-96 flex flex-col justify-center items-center space-y-4">
     <h1 class="font-black text-white text-7xl">Project Cancelled</h1>
     <a
       class="font-semibold text-cyan-400 hover:text-cyan-300 hover:underline"
